@@ -1,7 +1,9 @@
 # symmetric-key-tool
 对称加密在线工具
 
-无需后端，纯前端页面
+纯前端页面，无需后端
+
+项目基于[create-react-app](https://create-react-app.dev/)搭建, 模板为[cra-template-pwa-typescript](https://www.npmjs.com/package/cra-template-pwa-typescript)
 
 # 本地开发
 1. clone本项目
@@ -12,3 +14,16 @@
 # 构建
 1. npm run build 或者 yarn build
 2. 产物在根目录/build 下
+
+# 工作原理
+基于 [crypto-js](https://github.com/brix/crypto-js)，选择了其中的AES加密算法
+
+[主要代码](https://github.com/zggmd/symmetric-key-tool/blob/main/src/utils/helper.ts#L4)如下：
+```typescript
+import AES from 'crypto-js/aes';
+import encUtf8 from 'crypto-js/enc-utf8';
+// 加密
+export const encode = (msg: string, key: string): string => AES.encrypt(msg, key).toString();
+// 解密
+export const decode = (ciphertext: string, key: string): string => AES.decrypt(ciphertext, key).toString(encUtf8)
+```
