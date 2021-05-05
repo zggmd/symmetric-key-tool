@@ -1,0 +1,19 @@
+.Message {
+    z-index: 1000000;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    top: 25px;
+    pointer-events: none;
+    .msg {
+        background: rgba(255, 255, 255, 0.9);
+        padding: 4px 16px;
+        border-radius: 3px;
+        font-size: 12px;
+        box-sizing: border-box;
+        color: rgba(0, 0, 0, 0.85);
+        display: inline;
+        font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    }
+}
