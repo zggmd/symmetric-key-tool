@@ -3,6 +3,11 @@
 
 纯前端页面，无需后端
 
+一个线上Demo: [对称加密小工具](https://encode.zggmd.com/)
+
+Demo可以直接使用，但建议自己build后部署服务，更放心
+
+
 项目基于[create-react-app](https://create-react-app.dev/)搭建, 模板为[cra-template-pwa-typescript](https://www.npmjs.com/package/cra-template-pwa-typescript)
 
 # 本地开发
