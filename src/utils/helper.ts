@@ -2,11 +2,8 @@ import AES from 'crypto-js/aes';
 import encUtf8 from 'crypto-js/enc-utf8';
 
 export const encode = (msg: string, key: string): string => AES.encrypt(msg, key).toString();
-// Decrypt
-export const decode = (ciphertext: string, key: string): string => {
-    const  bytes  = AES.decrypt(ciphertext, key);
-    return bytes.toString(encUtf8);
-}
+
+export const decode = (ciphertext: string, key: string): string => AES.decrypt(ciphertext, key).toString(encUtf8)
 
 // Copies a string to the clipboard. Must be called from within an
 // event handler such as click. May return false if it failed, but

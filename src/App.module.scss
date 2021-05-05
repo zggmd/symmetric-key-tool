@@ -1,5 +1,57 @@
+$padding-base: 16px;
+
 .App {
-  font-size: 14px;
+  text-align: center;
+  width: 100%;
+  max-width: 740px;
+  padding: 50px;
+  .title {
+    font-size: 24px;
+    margin-bottom: $padding-base;
+  }
+  textarea, input {
+    caret-color: aliceblue;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: $padding-base;
+    background: #22282d;
+    border-radius: 4px;
+    border: 1px solid #363f47;
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      border-color: #886060;
+    }
+  }
+  ::placeholder {
+    color: #c8c9ca;
+  }
+  .textarea {
+    padding: 0.5 * $padding-base;
+  }
+  .key {
+    height: 40px;
+    padding: 0 0.5 * $padding-base;
+  }
+  .btns {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $padding-base;
+    .encode {
+      width: 45%;
+      height: 40px;
+      border-radius: 4px;
+      background-color: #363f47;
+      color: #acbbc7;
+      border: 1px solid #363f47;
+      cursor: pointer;
+      &:active {
+        background-color: #313B43FF;
+      }
+    }
+  }
   .res {
     white-space: pre-wrap;
   }
