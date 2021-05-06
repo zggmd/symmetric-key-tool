@@ -32,3 +32,7 @@ export const encode = (msg: string, key: string): string => AES.encrypt(msg, key
 // 解密
 export const decode = (ciphertext: string, key: string): string => AES.decrypt(ciphertext, key).toString(encUtf8)
 ```
+
+#  License
+ [MIT License](https://github.com/zggmd/symmetric-key-tool/blob/main/LICENSE)
+ 
