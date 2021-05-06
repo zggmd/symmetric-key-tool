@@ -10,11 +10,7 @@
 Demo可以直接使用，但建议自己build后部署服务，更放心
 
 
-项目基于[create-react-app](https://create-react-app.dev/)搭建
-
-模板为[cra-template-pwa-typescript](https://www.npmjs.com/package/cra-template-pwa-typescript)
-
-网页主题配色 模仿的是 github Dark dimmed 主题
+项目基于[create-react-app](https://create-react-app.dev/)搭建，模板为[cra-template-pwa-typescript](https://www.npmjs.com/package/cra-template-pwa-typescript)，网页主题配色 模仿的是 github Dark dimmed 主题
 
 # 本地开发
 1. clone本项目
