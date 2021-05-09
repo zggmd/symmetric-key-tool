@@ -5,6 +5,12 @@ $padding-base: 16px;
   width: 100%;
   max-width: 740px;
   padding: 50px;
+  .commonHover {
+    &:hover {
+      border-color: #46535f;
+      box-shadow: 0 0 7px #216798ba;
+    }
+  }
   .title {
     font-size: 24px;
     margin-bottom: $padding-base;
@@ -21,9 +27,7 @@ $padding-base: 16px;
     &:focus {
       outline: none;
     }
-    &:hover {
-      border-color: #886060;
-    }
+    @extend .commonHover;
   }
   ::placeholder {
     color: #c8c9ca;
@@ -35,24 +39,35 @@ $padding-base: 16px;
     height: 40px;
     padding: 0 0.5 * $padding-base;
   }
+  .commonBtn {
+    border-radius: 4px;
+    background-color: #363f47;
+    color: #acbbc7;
+    border: 1px solid #363f47;
+    cursor: pointer;
+    &:active {
+      background-color: #313B43FF;
+    }
+    @extend .commonHover;
+  }
   .btns {
     display: flex;
     justify-content: space-between;
     margin-bottom: $padding-base;
     .encode {
-      width: 45%;
+      @extend .commonBtn;
       height: 40px;
-      border-radius: 4px;
-      background-color: #363f47;
-      color: #acbbc7;
-      border: 1px solid #363f47;
-      cursor: pointer;
-      &:active {
-        background-color: #313B43FF;
-      }
+      width: 45%;
     }
+  }
+  .resTitle {
+    width: 100%;
+    text-align: left;
+    margin-top: 24px;
   }
   .res {
     white-space: pre-wrap;
+    text-align: left;
+    margin-top: 16px;
   }
 }

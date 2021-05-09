@@ -33,7 +33,9 @@ function App() {
     setResMsg(res)
     if (!res) return message('好像不对❌，是不是加密/解密点错了')
     if (res) {
-      copyFunc(res)
+      isEncode && copyFunc(res)
+      // 为了安全，解码不自动复制到剪切板
+      !isEncode && message('解码成功✅;如有需要，请点击[复制]按钮手动复制')
     }
   }, [text, key, setResMsg])
   //
@@ -45,11 +47,11 @@ function App() {
       <input className={styles.key} value={key} placeholder="key" onChange={keyChange}/>
       <div className={styles.btns}>
         <button className={styles.encode} onClick={btnClick.bind('', true)}>加密🔒 & 复制📋</button>
-        <button className={styles.encode} onClick={btnClick.bind('', false)}>解密🔐 & 复制📋</button>
+        <button className={styles.encode} onClick={btnClick.bind('', false)}>解密🔐</button>
       </div>
       {
         resMsg && <>
-          <div>转换结果：<button onClick={copyFunc.bind('', resMsg)}>复制</button></div>
+          <div className={styles.resTitle}>转换结果：<button className={styles.commonBtn} onClick={copyFunc.bind('', resMsg)}>复制</button></div>
           <div className={styles.res}>{resMsg}</div>
         </>
       }
