@@ -16,6 +16,7 @@ function App() {
   const [text, setText] = React.useState('')
   const [key, setKey] = React.useState('')
   const [resMsg, setResMsg] = React.useState('')
+  const [keyType, setKeyType] = React.useState('password')
   // textChange
   const textChange = React.useCallback(e => {
     setText(e.target.value)
@@ -38,13 +39,18 @@ function App() {
       !isEncode && message('解码成功✅;如有需要，请点击[复制]按钮手动复制')
     }
   }, [text, key, setResMsg])
-  //
-
+  // onEyeClick
+  const onEyeClick = React.useCallback(() => {
+    setKeyType(keyType === 'password' ? 'text' : 'password')
+  }, [setKeyType, keyType])
   return (
     <div className={styles.App}>
       <div className={styles.title}>对称加密</div>
       <textarea rows={8} className={styles.textarea} autoFocus placeholder="原文" value={text} onChange={textChange}/>
-      <input className={styles.key} value={key} placeholder="key" onChange={keyChange}/>
+      <div className={styles.keyRow}>
+        <input className={styles.key} type={keyType} value={key} placeholder="key" onChange={keyChange}/>
+        <div className={styles.eye} onClick={onEyeClick}>{keyType === 'password' ? '👁' : '🙈'}</div>
+      </div>
       <div className={styles.btns}>
         <button className={styles.encode} onClick={btnClick.bind('', true)}>加密🔒 & 复制📋</button>
         <button className={styles.encode} onClick={btnClick.bind('', false)}>解密🔐</button>

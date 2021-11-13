@@ -35,9 +35,19 @@ $padding-base: 16px;
   .textarea {
     padding: 0.5 * $padding-base;
   }
-  .key {
-    height: 40px;
-    padding: 0 0.5 * $padding-base;
+  .keyRow {
+    display: flex;
+    .key {
+      height: 40px;
+      padding: 0 0.5 * $padding-base;
+    }
+    .eye {
+      font-size: 20px;
+      margin-left: -33px;
+      margin-top: 5px;
+      cursor: pointer;
+      user-select: none;
+    }
   }
   .commonBtn {
     border-radius: 4px;
