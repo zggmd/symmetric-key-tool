@@ -1,4 +1,7 @@
 # symmetric-key-tool
+
+ [English](https://github.com/zggmd/symmetric-key-tool/blob/main/README.md) | 中文
+
 对称加密在线工具
 
 纯前端页面，无需后端
