@@ -1,4 +1,7 @@
 # symmetric-key-tool
+
+English | [中文](https://github.com/zggmd/symmetric-key-tool/blob/main/README-ZH.md)
+
 Symmetric Encryption Online Tool
 
 Pure frontend page, no backend required.
