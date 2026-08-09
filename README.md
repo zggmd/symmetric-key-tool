@@ -1,3 +1,5 @@
+
+
 # symmetric-key-tool
 
 English | [中文](https://github.com/zggmd/symmetric-key-tool/blob/main/README-ZH.md)
@@ -56,3 +58,9 @@ import encUtf8 from 'crypto-js/enc-utf8';
 export const encode = (msg: string, key: string): string => AES.encrypt(msg, key).toString();
 // Decrypt
 export const decode = (ciphertext: string, key: string): string => AES.decrypt(ciphertext, key).toString(encUtf8)
+```
+
+---
+
+# License
+ [MIT License](https://github.com/zggmd/symmetric-key-tool/blob/main/LICENSE)
